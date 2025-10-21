@@ -15,7 +15,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 10px; /* Reduced padding */
+    padding: 0 20px;
 }
 
 /* Navigation */
@@ -31,7 +31,7 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 10px; /* Reduced padding */
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -114,7 +114,7 @@ body {
 
 /* Sections */
 .section {
-    padding: 60px 0; /* Reduced to bring videos up */
+    padding: 100px 0; /* Reverted to original padding */
     background: #FFF; /* White */
 }
 
@@ -124,8 +124,8 @@ body {
 
 .section-title {
     text-align: center;
-    font-size: 2.8rem;
-    margin-bottom: 3rem;
+    font-size: 3rem; /* Reverted to original size */
+    margin-bottom: 4rem;
     color: #000; /* Black */
     font-family: 'Playfair Display', serif;
 }
@@ -133,17 +133,16 @@ body {
 .section-title i {
     color: #F39C12; /* Orange */
     margin-right: 15px;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
 }
 
 /* Video Grid */
 .videos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
     max-width: 1200px;
     margin: 0 auto;
-    justify-content: center; /* Center videos */
 }
 
 /* Video Cards */
@@ -209,78 +208,26 @@ footer a {
 }
 
 /* Mobile */
-@media (max-width: 375px) { /* Specific to iPhone SE */
-    .navbar {
-        height: 50px; /* Reduced height */
-    }
-    .nav-container {
-        height: 50px; /* Match navbar */
-    }
-    .logo {
-        height: 25px; /* Even smaller for iPhone SE */
-    }
-    .logo img.nav-logo {
-        height: 100%;
-        width: auto;
-    }
-    .hamburger {
-        margin-top: -5px; /* Adjust positioning */
-        display: block !important; /* Force visibility on iPhone SE */
-    }
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 50px; /* Match reduced navbar height */
+        top: 70px;
         flex-direction: column;
         background: #FFF; /* White */
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        padding: 0.5rem 0; /* Further reduced padding */
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    .nav-menu.active {
-        left: 0; /* Slide in when active */
-    }
-    .videos-grid {
-        padding: 0 5px; /* Minimize padding */
-        justify-content: center; /* Ensure centering */
-    }
-    .hero-content .hero-logo {
-        max-width: 150px; /* Smaller logo on iPhone SE */
-    }
-}
-@media (max-width: 768px) and (min-width: 376px) {
-    .navbar {
-        height: 50px; /* Reduced height */
-    }
-    .nav-container {
-        height: 50px; /* Match navbar */
-    }
-    .logo {
-        height: 30px; /* Smaller logo */
-    }
-    .logo img.nav-logo {
-        height: 100%;
-        width: auto;
-    }
-    .hamburger {
-        margin-top: -5px; /* Adjust positioning */
-        display: block; /* Ensure visible */
-    }
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 50px; /* Match reduced navbar height */
-        flex-direction: column;
-        background: #FFF; /* White */
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        padding: 1rem 0; /* Reduced padding */
+        padding: 2rem 0;
         box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
-    .nav-menu.active {
-        left: 0; /* Slide in when active */
+    .nav-menu.active { left: 0; }
+    
+    .hero-content h1 { font-size: 3rem; }
+    .videos-grid { 
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
     }
+    .section-title { font-size: 2rem; }
 }
