@@ -81,8 +81,8 @@ body {
 
 /* Hero */
 .hero {
-    background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%); /* Orange gradient */
-    height: 100vh;
+    background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4NDhQRCggICwsQDg4NDh8QEB09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09/2wBDAQoHBwkLCgoLCwsMDxAQEB09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09/3QAEAAj/xAGAAAAYEBAAAAAAAAAAAAAAAAAAAAAAMBAQEAAAAAAAAAAAAAAAABAgMEBQYHAAUAAwAAAAAAAAAAAAAAAAAAAAAABAQIDBAYHCAEAAwEAAAAAAAAAAAAAAAAAAQIDBAYH/2gAMAwEAAhEDEQA/AP8A/9oADAMBAAIRAxEAPwD/2Q==') no-repeat center center/cover; /* Desert rock/orange image */
+    height: 50vh; /* Reduced height to bring videos up */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,46 +98,28 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    background: rgba(0,0,0,0.4); /* Black overlay for readability */
 }
 
 .hero-content h1 {
-    font-size: 4.5rem;
-    margin-bottom: 1rem;
+    font-size: 3rem; /* Smaller for reduced height */
+    margin-bottom: 0.5rem;
     font-family: 'Playfair Display', serif;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Black shadow */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Black shadow */
+    z-index: 1;
 }
 
 .hero-content p {
-    font-size: 1.4rem;
-    margin-bottom: 2.5rem;
-    max-width: 700px;
-    opacity: 0.95;
-}
-
-.cta-button {
-    background: #F39C12; /* Orange */
-    color: #FFF; /* White */
-    padding: 18px 40px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
     font-size: 1.2rem;
-    transition: all 0.3s;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 10px 30px rgba(243,156,18,0.3); /* Orange shadow */
-}
-
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(243,156,18,0.4);
+    margin-bottom: 0;
+    max-width: 600px;
+    opacity: 0.9;
+    z-index: 1;
 }
 
 /* Sections */
 .section {
-    padding: 100px 0;
+    padding: 60px 0; /* Reduced padding to bring videos up */
     background: #FFF; /* White */
 }
 
@@ -147,8 +129,8 @@ body {
 
 .section-title {
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 4rem;
+    font-size: 2.8rem; /* Slightly smaller */
+    margin-bottom: 3rem;
     color: #000; /* Black */
     font-family: 'Playfair Display', serif;
 }
@@ -156,14 +138,14 @@ body {
 .section-title i {
     color: #F39C12; /* Orange */
     margin-right: 15px;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
 /* Video Grid */
 .videos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 2.5rem;
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -217,60 +199,6 @@ body {
     margin: 0;
 }
 
-/* Contact */
-.contact {
-    padding: 100px 0;
-    background: #000; /* Black */
-    color: #FFF; /* White */
-}
-
-.contact .section-title {
-    color: #FFF;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 18px;
-    margin-bottom: 1.5rem;
-    border: none;
-    border-radius: 12px;
-    font-family: inherit;
-    font-size: 1rem;
-    background: rgba(255,255,255,0.95); /* White with opacity */
-    transition: all 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    transform: scale(1.02);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.contact-form button {
-    width: 100%;
-    background: #F39C12; /* Orange */
-    color: #FFF; /* White */
-    padding: 18px;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.contact-form button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(243,156,18,0.3);
-}
-
 /* Footer */
 footer {
     background: #000; /* Black */
@@ -301,7 +229,7 @@ footer a {
     }
     .nav-menu.active { left: 0; }
     
-    .hero-content h1 { font-size: 3rem; }
+    .hero-content h1 { font-size: 2.5rem; }
     .videos-grid { 
         grid-template-columns: 1fr; 
         gap: 1.5rem;
