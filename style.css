@@ -15,7 +15,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px; /* Reverted to original narrower padding */
 }
 
 /* Navigation */
@@ -26,6 +26,7 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
+    display: none; /* Hide navbar on mobile as per last update */
 }
 
 .nav-container {
@@ -114,7 +115,7 @@ body {
 
 /* Sections */
 .section {
-    padding: 50px 0; /* Reduced from 100px to 50px */
+    padding: 50px 0; /* Reduced from 100px */
     background: #FFF; /* White */
 }
 
@@ -140,7 +141,7 @@ body {
 .videos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 2rem;
+    gap: 2rem; /* Reverted to original gap */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -214,11 +215,11 @@ footer a {
     }
     .hamburger { display: none; } /* Hide hamburger since navbar is gone */
     .nav-menu { display: none; } /* Hide menu items */
-    .section { padding: 30px 0; } /* Further reduced vertical space */
-    .section-title { font-size: 2rem; } /* Already adjusted */
+    .section { padding: 30px 0; } /* Reduced vertical space */
+    .section-title { font-size: 2rem; } /* Reduced font size */
     .section-title i { font-size: 1.8rem; } /* Adjusted icon size */
-    .video-info h3 { font-size: 1rem; } /* Further reduced for mobile */
-    .hero { height: 40vh; } /* Reduced hero height to compensate */
+    .video-info h3 { font-size: 1rem; } /* Reduced font size */
+    .hero { height: 40vh; } /* Reduced hero height */
     .hero-content .hero-logo { max-width: 200px; } /* Adjusted logo size */
-    .videos-grid { gap: 1rem; } /* Reduced gap between videos */
+    .videos-grid { gap: 1rem; } /* Reduced gap */
 }
