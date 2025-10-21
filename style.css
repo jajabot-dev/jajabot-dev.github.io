@@ -15,7 +15,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px; /* Reduced padding for narrow screens */
 }
 
 /* Navigation */
@@ -31,7 +31,7 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px; /* Reduced padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -143,6 +143,7 @@ body {
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    justify-content: center; /* Center videos on narrow screens */
 }
 
 /* Video Cards */
@@ -208,15 +209,15 @@ footer a {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 375px) { /* Specific to iPhone SE */
     .navbar {
-        height: 50px; /* Reduced height for mobile */
+        height: 50px; /* Reduced height */
     }
     .nav-container {
         height: 50px; /* Match navbar */
     }
     .logo {
-        height: 30px; /* Smaller logo on mobile */
+        height: 30px; /* Smaller logo */
     }
     .logo img.nav-logo {
         height: 100%;
@@ -224,7 +225,45 @@ footer a {
     }
     .hamburger {
         margin-top: -5px; /* Adjust positioning */
-        display: block; /* Ensure visible on mobile */
+        display: block; /* Ensure visible */
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 50px; /* Match reduced navbar height */
+        flex-direction: column;
+        background: #FFF; /* White */
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 1rem 0; /* Reduced padding */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .nav-menu.active {
+        left: 0; /* Slide in when active */
+    }
+    .videos-grid {
+        padding: 0 5px; /* Reduce padding on sides */
+        justify-content: center; /* Ensure centering */
+    }
+}
+@media (max-width: 768px) and (min-width: 376px) {
+    .navbar {
+        height: 50px; /* Reduced height */
+    }
+    .nav-container {
+        height: 50px; /* Match navbar */
+    }
+    .logo {
+        height: 30px; /* Smaller logo */
+    }
+    .logo img.nav-logo {
+        height: 100%;
+        width: auto;
+    }
+    .hamburger {
+        margin-top: -5px; /* Adjust positioning */
+        display: block; /* Ensure visible */
     }
     .nav-menu {
         position: fixed;
