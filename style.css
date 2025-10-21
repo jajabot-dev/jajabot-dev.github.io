@@ -39,13 +39,14 @@ body {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #F39C12; /* Orange */
-    font-family: 'Playfair Display', serif;
+    height: 40px; /* Adjust based on your PNG size */
 }
 
-.logo i { color: #F39C12; margin-right: 8px; }
+.logo img.nav-logo {
+    height: 100%;
+    width: auto;
+    vertical-align: middle;
+}
 
 .nav-menu {
     display: flex;
@@ -91,14 +92,14 @@ body {
     position: relative;
 }
 
-/* Removed overlay - no .hero::before */
-.hero-content h1 {
-    font-size: 3rem; /* Adjusted for height */
+.hero-content {
+    text-align: center;
+}
+
+.hero-content .hero-logo {
+    max-width: 300px; /* Adjust based on your PNG size */
+    height: auto;
     margin-bottom: 0.5rem;
-    font-family: 'Playfair Display', serif;
-    color: #FFF; /* White text */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Subtle black shadow */
-    z-index: 1;
 }
 
 .hero-content p {
@@ -107,7 +108,7 @@ body {
     max-width: 600px;
     color: #FFF; /* White text */
     opacity: 0.9;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Subtle shadow */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Subtle shadow */
     z-index: 1;
 }
 
@@ -223,7 +224,8 @@ footer a {
     }
     .nav-menu.active { left: 0; }
     
-    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content .hero-logo { max-width: 200px; }
+    .hero-content p { font-size: 1rem; }
     .videos-grid { 
         grid-template-columns: 1fr; 
         gap: 1.5rem;
