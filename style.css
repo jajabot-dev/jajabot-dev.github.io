@@ -114,7 +114,7 @@ body {
 
 /* Sections */
 .section {
-    padding: 100px 0; /* Reverted to original padding */
+    padding: 50px 0; /* Reduced from 100px to 50px */
     background: #FFF; /* White */
 }
 
@@ -124,8 +124,8 @@ body {
 
 .section-title {
     text-align: center;
-    font-size: 3rem; /* Reverted to original size */
-    margin-bottom: 4rem;
+    font-size: 2.5rem; /* Reduced from 3rem */
+    margin-bottom: 2rem; /* Reduced from 4rem */
     color: #000; /* Black */
     font-family: 'Playfair Display', serif;
 }
@@ -133,14 +133,14 @@ body {
 .section-title i {
     color: #F39C12; /* Orange */
     margin-right: 15px;
-    font-size: 2.5rem;
+    font-size: 2rem; /* Reduced from 2.5rem */
 }
 
 /* Video Grid */
 .videos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 2.5rem;
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -181,7 +181,7 @@ body {
 }
 
 .video-info h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem; /* Reduced from 1.3rem */
     margin-bottom: 0.5rem;
     color: #000; /* Black */
     font-family: 'Playfair Display', serif;
@@ -209,37 +209,16 @@ footer a {
 
 /* Mobile */
 @media (max-width: 768px) {
-    .hamburger { display: flex; }
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background: #FFF; /* White */
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        padding: 2rem 0;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-    .nav-menu.active { left: 0; }
     .navbar {
-        height: 60px; /* Slightly shrunk from 70px, above 44px minimum */
+        display: none; /* Hide navbar on mobile */
     }
-    .nav-container {
-        height: 60px; /* Match navbar */
-    }
-    .logo {
-        height: 35px; /* Slightly smaller to fit */
-    }
-    .logo img.nav-logo {
-        height: 100%;
-        width: auto;
-    }
-    .hero-content .hero-logo { max-width: 250px; } /* Adjust for new height */
-    .videos-grid { 
-        grid-template-columns: 1fr; 
-        gap: 1.5rem;
-    }
-    .section-title { font-size: 2rem; }
+    .hamburger { display: none; } /* Hide hamburger since navbar is gone */
+    .nav-menu { display: none; } /* Hide menu items */
+    .section { padding: 30px 0; } /* Further reduced vertical space */
+    .section-title { font-size: 2rem; } /* Already adjusted */
+    .section-title i { font-size: 1.8rem; } /* Adjusted icon size */
+    .video-info h3 { font-size: 1rem; } /* Further reduced for mobile */
+    .hero { height: 40vh; } /* Reduced hero height to compensate */
+    .hero-content .hero-logo { max-width: 200px; } /* Adjusted logo size */
+    .videos-grid { gap: 1rem; } /* Reduced gap between videos */
 }
