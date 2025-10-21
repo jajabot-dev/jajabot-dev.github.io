@@ -91,13 +91,13 @@ body {
     position: relative;
 }
 
-/* Removed overlay - rely on text shadow for visibility */
+/* Removed overlay - no .hero::before */
 .hero-content h1 {
     font-size: 3rem; /* Adjusted for height */
     margin-bottom: 0.5rem;
     font-family: 'Playfair Display', serif;
     color: #FFF; /* White text */
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* Stronger black shadow for desert background */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Subtle black shadow */
     z-index: 1;
 }
 
@@ -107,7 +107,7 @@ body {
     max-width: 600px;
     color: #FFF; /* White text */
     opacity: 0.9;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Adjusted shadow */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Subtle shadow */
     z-index: 1;
 }
 
