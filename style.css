@@ -163,7 +163,7 @@ body {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 37.5%; /* Reduced from 56.25% by ~1/3 */
     height: 0;
     overflow: hidden;
     background: #000; /* Black */
@@ -218,8 +218,10 @@ footer a {
     .section { padding: 30px 0; } /* Reduced vertical space */
     .section-title { font-size: 1.5rem; } /* Reduced from 2rem */
     .section-title i { font-size: 1.4rem; } /* Adjusted icon size */
-    .video-info h3 { font-size: 1rem; } /* Reduced from 1.3rem, as requested */
+    .video-info { padding: 0.5rem; } /* Reduced from 1.5rem to minimize vertical space */
+    .video-info h3 { font-size: 1rem; } /* Unchanged */
     .hero { height: 40vh; } /* Reduced hero height */
     .hero-content .hero-logo { max-width: 200px; } /* Adjusted logo size */
     .videos-grid { gap: 1rem; } /* Reduced gap */
+    .video-container { padding-bottom: 25%; } /* Further reduced by ~1/3 from 37.5% for mobile */
 }
