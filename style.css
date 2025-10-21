@@ -115,7 +115,7 @@ body {
 
 /* Sections */
 .section {
-    padding: 50px 0; /* Reduced from 100px */
+    padding: 100px 0; /* Reverted to original 100px */
     background: #FFF; /* White */
 }
 
@@ -125,8 +125,8 @@ body {
 
 .section-title {
     text-align: center;
-    font-size: 2.5rem; /* Reduced from 3rem */
-    margin-bottom: 2rem; /* Reduced from 4rem */
+    font-size: 3rem; /* Reverted to original 3rem */
+    margin-bottom: 4rem; /* Reverted to original 4rem */
     color: #000; /* Black */
     font-family: 'Playfair Display', serif;
 }
@@ -134,14 +134,14 @@ body {
 .section-title i {
     color: #F39C12; /* Orange */
     margin-right: 15px;
-    font-size: 2rem; /* Reduced from 2.5rem */
+    font-size: 2.5rem; /* Reverted to original 2.5rem */
 }
 
 /* Video Grid */
 .videos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 2rem; /* Reverted to original gap */
+    gap: 2.5rem; /* Reverted to original gap */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -182,7 +182,7 @@ body {
 }
 
 .video-info h3 {
-    font-size: 1.1rem; /* Reduced from 1.3rem */
+    font-size: 1.3rem; /* Reverted to original 1.3rem */
     margin-bottom: 0.5rem;
     color: #000; /* Black */
     font-family: 'Playfair Display', serif;
@@ -216,9 +216,9 @@ footer a {
     .hamburger { display: none; } /* Hide hamburger since navbar is gone */
     .nav-menu { display: none; } /* Hide menu items */
     .section { padding: 30px 0; } /* Reduced vertical space */
-    .section-title { font-size: 2rem; } /* Reduced font size */
-    .section-title i { font-size: 1.8rem; } /* Adjusted icon size */
-    .video-info h3 { font-size: 1rem; } /* Reduced font size */
+    .section-title { font-size: 1.5rem; } /* Reduced from 2rem */
+    .section-title i { font-size: 1.4rem; } /* Adjusted icon size */
+    .video-info h3 { font-size: 1rem; } /* Reduced from 1.3rem, as requested */
     .hero { height: 40vh; } /* Reduced hero height */
     .hero-content .hero-logo { max-width: 200px; } /* Adjusted logo size */
     .videos-grid { gap: 1rem; } /* Reduced gap */
