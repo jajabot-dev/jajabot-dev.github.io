@@ -223,8 +223,20 @@ footer a {
         box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
     .nav-menu.active { left: 0; }
-    
-    .hero-content h1 { font-size: 3rem; }
+    .navbar {
+        height: 60px; /* Slightly shrunk from 70px, above 44px minimum */
+    }
+    .nav-container {
+        height: 60px; /* Match navbar */
+    }
+    .logo {
+        height: 35px; /* Slightly smaller to fit */
+    }
+    .logo img.nav-logo {
+        height: 100%;
+        width: auto;
+    }
+    .hero-content .hero-logo { max-width: 250px; } /* Adjust for new height */
     .videos-grid { 
         grid-template-columns: 1fr; 
         gap: 1.5rem;
