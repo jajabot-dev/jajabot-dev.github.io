@@ -224,7 +224,7 @@ footer a {
     }
     .nav-menu.active { left: 0; }
     .hero { 
-        margin-top: 30px; /* Lower content by 30px to avoid navbar overlap */
+        margin-top: 60px; /* Increased from 30px to 60px to lower content */
     }
     .section { padding: 30px 0; } /* Reduced vertical space */
     .section-title { font-size: 1.5rem; } /* Reduced from 2rem */
