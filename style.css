@@ -103,7 +103,7 @@ body {
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Reduced from 1.2rem */
     margin-bottom: 0;
     max-width: 600px;
     color: #FFF; /* White text */
@@ -224,7 +224,7 @@ footer a {
     }
     .nav-menu.active { left: 0; }
     .hero { 
-        margin-top: 60px; /* Increased from 30px to 60px to lower content */
+        margin-top: 70px; /* Increased from 60px to 70px to lower content */
     }
     .section { padding: 30px 0; } /* Reduced vertical space */
     .section-title { font-size: 1.5rem; } /* Reduced from 2rem */
@@ -236,4 +236,5 @@ footer a {
         gap: 1.5rem;
     }
     .section-title { margin-bottom: 1rem; } /* Reduced from 2rem to half */
+    .hero-content p { font-size: 1rem; } /* Reduced from 1.2rem */
 }
