@@ -236,5 +236,8 @@ footer a {
         gap: 1.5rem;
     }
     .section-title { margin-bottom: 1rem; } /* Reduced from 2rem to half */
-    .hero-content p { font-size: 1rem; } /* Reduced from 1.2rem */
+    .hero-content p { 
+        font-size: 1rem; /* Reduced from 1.2rem */
+        padding: 0 10px; /* Add 5-10px margin on each side */
+    }
 }
